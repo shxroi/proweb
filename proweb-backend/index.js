@@ -1,17 +1,19 @@
+// index.js
 const express = require('express');
-const cors = require('cors');
 const app = express();
-const PORT = 3001;
-app.use(cors());
-app.use(express.json());
+const PORT = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello World from Express.js!');
-});
-app.post('/data', (req, res) => {
-    const { nama } = req.body;
-    res.send(`Data diterima: ${nama}`);
-});
 app.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
+
+// GET route
+app.get('/', (req, res) => {
+    res.send('Hello GET from Express!');
+  });
+  
+  // POST route
+  app.post('/submit', (req, res) => {
+    res.send('Data has been submitted!');
+  });
+  
