@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 🛍️ Sistem Manajemen E-Commerce Sederhana
-
+## Link Repository : https://github.com/shxroi/proweb
 
 ## 📝 Deskripsi Aplikasi
 Sistem Manajemen  E-Commerce Sederhana adalah aplikasi web yang memungkinkan pengguna untuk mengelola daftar produk secara efisien. Aplikasi ini menyediakan antarmuka yang intuitif untuk menampilkan, menambah, mengedit, dan menghapus produk dengan informasi seperti nama dan harga. Aplikasi ini dirancang dengan mempertimbangkan kemudahan penggunaan dan performa yang optimal.
@@ -140,7 +140,7 @@ proweb/
 ## ✨ Fitur-fitur Aplikasi
 
 ### 1. ➕ Fitur Tambah Produk
-<img src="/img/create.png">
+![alt text](img/create.png)
 
 - **Form Input**
   - Input field untuk nama produk
@@ -164,7 +164,7 @@ proweb/
   - Handling karakter khusus
 
 ### 2. 📋 Tampilan Daftar Produk
-<img src="/img/tampilan.png">
+![alt text](img/tampilan.png)
 
 - **Layout & Desain**
   - Grid layout untuk daftar produk
@@ -179,7 +179,7 @@ proweb/
   - Search/filter produk
 
 ### 3. ✏️ Fitur Edit Produk
-<img src="/img/edit.png">
+![alt text](img/edit.png)
 
 - **Form Edit**
   - Inline editing untuk UX yang lebih baik
@@ -194,7 +194,7 @@ proweb/
   - Auto-focus pada input pertama
 
 ### 4. 🗑️ Fitur Hapus Produk
-<img src="/img/delete.png">
+![alt text](img/delete.png)
 
 - **Konfirmasi**
   - Modal dialog konfirmasi
@@ -209,7 +209,7 @@ proweb/
   - Error handling yang jelas
 
 ### 5. 📱 Responsive Design
-<img src="/img/responsive.png">
+![alt text](img/responsive.png)
 
 - **Desktop (>1024px)**
   - Grid layout 3 kolom
