@@ -12,6 +12,8 @@ function ProdukList() {
     const [produk, setProduk] = useState<Produk[]>([]);
     const [error, setError] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
+    const [editingProduct, setEditingProduct] = useState<Produk | null>(null);
+    const [editForm, setEditForm] = useState<{ nama: string; harga: number }>({ nama: '', harga: 0 });
  
     useEffect(() => {
         setLoading(true);
@@ -27,6 +29,40 @@ function ProdukList() {
                 setLoading(false);
             });
     }, []);
+
+    const handleDelete = (id: number) => {
+        if (window.confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+            axios.delete(`http://localhost:3001/produk/${id}`)
+                .then(() => {
+                    setProduk(produk.filter((p) => p.id !== id));
+                })
+                .catch(err => console.error(err));
+        }
+    };
+
+    const handleEdit = (product: Produk) => {
+        setEditingProduct(product);
+        setEditForm({ nama: product.nama, harga: product.harga });
+    };
+
+    const handleUpdate = () => {
+        if (!editingProduct) return;
+        
+        axios.put(`http://localhost:3001/produk/${editingProduct.id}`, editForm)
+            .then((response) => {
+                setProduk(produk.map(p => 
+                    p.id === editingProduct.id ? response.data : p
+                ));
+                setEditingProduct(null);
+                setEditForm({ nama: '', harga: 0 });
+            })
+            .catch(err => console.error(err));
+    };
+
+    const handleCancelEdit = () => {
+        setEditingProduct(null);
+        setEditForm({ nama: '', harga: 0 });
+    };
  
     return (
         <div className="product-container">
@@ -54,8 +90,31 @@ function ProdukList() {
                 <ul className="product-items">
                     {produk.map((item) => (
                         <li key={item.id} className="product-item">
-                            <span className="product-name">{item.nama}</span>
-                            <span className="product-price">Rp {item.harga.toLocaleString()}</span>
+                            {editingProduct?.id === item.id ? (
+                                <div className="edit-form">
+                                    <input
+                                        type="text"
+                                        value={editForm.nama}
+                                        onChange={(e) => setEditForm({ ...editForm, nama: e.target.value })}
+                                        placeholder="Nama Produk"
+                                    />
+                                    <input
+                                        type="number"
+                                        value={editForm.harga}
+                                        onChange={(e) => setEditForm({ ...editForm, harga: Number(e.target.value) })}
+                                        placeholder="Harga"
+                                    />
+                                    <button onClick={handleUpdate} className="save-button">Save</button>
+                                    <button onClick={handleCancelEdit} className="cancel-button">Cancel</button>
+                                </div>
+                            ) : (
+                                <>
+                                    <span className="product-name">{item.nama}</span>
+                                    <span className="product-price">Rp {item.harga.toLocaleString()}</span>
+                                    <button onClick={() => handleEdit(item)} className="edit-button">Edit</button>
+                                    <button onClick={() => handleDelete(item.id)} className="delete-button">Delete</button>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
