@@ -15,23 +15,23 @@ Aplikasi Web Manajemen E-Commerce Sederhana dirancang untuk membantu pengguna da
 ## Teknologi yang Digunakan
 
 ### Frontend
-- ** React.js dengan TypeScript**
+- **React.js dengan TypeScript**
   - Menggunakan Vite sebagai alat build
   - TypeScript untuk keamanan tipe
   - React Hooks untuk manajemen state
-- ** Axios**
+- **Axios**
   - HTTP client untuk berkomunikasi dengan API
   - Penanganan error yang kuat
-- ** CSS**
+- **CSS**
   - Styling modern dengan flexbox
   - Desain responsif
   - Animasi dan transisi yang halus
 
 ### Backend
-- ** Node.js & Express.js**
+- **Node.js & Express.js**
   - Arsitektur RESTful API
   - Middleware untuk CORS dan penanganan error
-- ** MySQL**
+- **MySQL**
   - Database relasional
   - Query yang dioptimalkan
 
