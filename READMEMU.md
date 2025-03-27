@@ -4,48 +4,48 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 🛍️ Sistem Manajemen E-Commerce Sederhana
+# Sistem Manajemen E-Commerce Sederhana
 ## Link Repository : https://github.com/shxroi/proweb
 
-## 📝 Deskripsi Aplikasi
+## Deskripsi Aplikasi
 Aplikasi Web Manajemen E-Commerce Sederhana dirancang untuk membantu pengguna dalam mengelola daftar produk dengan lebih efisien. Dengan antarmuka yang user-friendly, pengguna dapat dengan mudah melihat, menambahkan, memperbarui, dan menghapus produk beserta detail seperti nama dan harga. Pengembangan aplikasi ini berfokus pada kemudahan navigasi serta performa yang optimal.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 ### Frontend
-- **⚛️ React.js dengan TypeScript**
+- ** React.js dengan TypeScript**
   - Menggunakan Vite sebagai alat build
   - TypeScript untuk keamanan tipe
   - React Hooks untuk manajemen state
-- **🌐 Axios**
+- ** Axios**
   - HTTP client untuk berkomunikasi dengan API
   - Penanganan error yang kuat
-- **🎨 CSS**
+- ** CSS**
   - Styling modern dengan flexbox
   - Desain responsif
   - Animasi dan transisi yang halus
 
 ### Backend
-- **🚀 Node.js & Express.js**
+- ** Node.js & Express.js**
   - Arsitektur RESTful API
   - Middleware untuk CORS dan penanganan error
-- **💾 MySQL**
+- ** MySQL**
   - Database relasional
   - Query yang dioptimalkan
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## ⚙️ Persyaratan Sistem
+## Persyaratan Sistem
 - Node.js v14 atau lebih tinggi
 - MySQL v8.0 atau lebih tinggi
 - NPM v6 atau lebih tinggi
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 📦 Instruksi Instalasi
+## Instruksi Instalasi
 1. Clone repository ini
    ```bash
    git clone [URL_REPOSITORY]
@@ -94,7 +94,7 @@ Aplikasi Web Manajemen E-Commerce Sederhana dirancang untuk membantu pengguna da
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 📁 Struktur Proyek
+## Struktur Proyek
 ```
 proweb/
 ├── proweb-backend/
@@ -113,7 +113,7 @@ proweb/
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🔌 API Endpoints
+## API Endpoints
 ### Produk
 1. `GET /produk`
    - Mendapatkan semua produk
@@ -139,9 +139,9 @@ proweb/
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## ✨ Fitur-fitur Aplikasi
+## Fitur-fitur Aplikasi
 
-### 1. ➕ Fitur Tambah Produk
+### 1. Fitur Tambah Produk
 ![alt text](img/create.png)
 
 - **Form Input**
@@ -165,7 +165,7 @@ proweb/
   - Format harga sesuai standar
   - Penanganan karakter khusus
 
-### 2. 📋 Tampilan Daftar Produk
+### 2. Tampilan Daftar Produk
 ![alt text](img/tampilan.png)
 
 - **Layout & Desain**
@@ -180,7 +180,7 @@ proweb/
   - Pagination untuk data dalam jumlah besar
   - Fitur pencarian dan filter produk
 
-### 3. ✏️ Fitur Edit Produk
+### 3. Fitur Edit Produk
 ![alt text](img/edit.png)
 
 - **Form Edit**
@@ -195,7 +195,7 @@ proweb/
   - Pintasan keyboard (Esc untuk batal)
   - Auto-focus pada input pertama
 
-### 4. 🗑️ Fitur Hapus Produk
+### 4. Fitur Hapus Produk
 ![alt text](img/delete.png)
 
 - **Konfirmasi**
@@ -210,7 +210,7 @@ proweb/
   - Opsi undo (jika diperlukan)
   - Penanganan error yang jelas
 
-### 5. 📱 Desain Responsif
+### 5. Desain Responsif
 ![alt text](img/responsive.png)
 
 - **Desktop (>1024px)**
@@ -281,20 +281,20 @@ proweb/
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🎯 Kesimpulan
+## Kesimpulan
 
 Sistem Manajemen Produk ini menghadirkan solusi yang efisien dan ramah pengguna dalam mengelola data produk. Dengan mengadopsi teknologi modern serta best practices dalam pengembangan web, aplikasi ini menawarkan:
-- ⚡ Kinerja yang optimal
-- 👥 Pengalaman pengguna yang intuitif
-- 🔒 Keamanan data yang terjaga
-- 🛠️ Kemudahan dalam perawatan dan pengelolaan
-- 📈 Skalabilitas untuk pengembangan di masa depan
+-  Kinerja yang optimal
+-  Pengalaman pengguna yang intuitif
+-  Keamanan data yang terjaga
+-  Kemudahan dalam perawatan dan pengelolaan
+-  Skalabilitas untuk pengembangan di masa depan
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
-### 1. 🗄️ Error Koneksi Database
+### 1.  Error Koneksi Database
 Jika muncul error "Cannot connect to database":
 - Pastikan MySQL server sudah berjalan
 - Periksa konfigurasi database di `db.js`
@@ -302,7 +302,7 @@ Jika muncul error "Cannot connect to database":
 - Cek firewall settings
 - Verifikasi port MySQL (default: 3306)
 
-### 2. 🌐 Error CORS
+### 2.  Error CORS
 Jika muncul error CORS:
 - Pastikan backend server berjalan di port 3001
 - Periksa konfigurasi CORS di backend
@@ -310,7 +310,7 @@ Jika muncul error CORS:
 - Cek header 'Access-Control-Allow-Origin'
 - Verifikasi method HTTP yang diizinkan
 
-### 3. 📝 Error TypeScript
+### 3.  Error TypeScript
 Jika muncul error TypeScript:
 - Jalankan `npm install` untuk memastikan semua dependencies terinstall
 - Periksa tipe data di interface `Produk`
@@ -318,7 +318,7 @@ Jika muncul error TypeScript:
 - Update TypeScript ke versi terbaru
 - Clear TypeScript cache
 
-### 4. 📥 Error Loading Data
+### 4.  Error Loading Data
 Jika data tidak muncul:
 - Periksa koneksi internet
 - Pastikan backend server berjalan
@@ -326,7 +326,7 @@ Jika data tidak muncul:
 - Verifikasi format response API
 - Cek network tab di DevTools
 
-### 5. 🏗️ Error Build
+### 5.  Error Build
 Jika terjadi error saat build:
 - Clear node_modules dan package-lock.json
 - Jalankan `npm cache clean --force`
